@@ -1,46 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>RyOCC Mapa</title>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RyOCC Mapa</title>
+    
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script defer src="js/script.js"></script>
 </head>
 <body>
-    <div id="map" style="width: 100%; height: 600px;"></div>
-    <script>
-        var map = L.map('map').setView([25.6866, -100.3161], 6); // Coordenadas iniciales (Monterrey)
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
-
-        // Cargar la capa de municipios (ejemplo con un punto para Monterrey)
-        var municipios = L.geoJSON({
-            "type": "FeatureCollection",
-            "features": [
-                {
-                    "type": "Feature",
-                    "properties": {
-                        "name": "Monterrey",
-                        "riesgo": "Alto",
-                        "CVEGEO": "19039"
-                    },
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [-100.3161, 25.6866]
-                    }
-                }
-            ]
-        }, {
-            onEachFeature: function (feature, layer) {
-                var popupContent = `<b>${feature.properties.name}</b><br/>` +
-                                   `Riesgo: ${feature.properties.riesgo}<br/>` +
-                                   `<a href="datos.html?CVEGEO=${feature.properties.CVEGEO}" target="_blank">Ver datos</a>`;
-                layer.bindPopup(popupContent);
-            }
-        }).addTo(map);
-    </script>
+    <div id="map"></div>
 </body>
 </html>
