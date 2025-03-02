@@ -3,17 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RyOCC Map</title>
-
-    <!-- Hoja de estilos -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script defer src="js/script.js"></script>
+    <title>Mapa de prueba</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
-    <div id="map"></div>
+    <div id="map" style="width: 100%; height: 600px;"></div>
+    <script>
+        var map = L.map('map').setView([25.6866, -100.3161], 6);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+    </script>
 </body>
 </html>
