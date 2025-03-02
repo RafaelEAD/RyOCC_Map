@@ -9,3 +9,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
     console.log("Mapa inicializado correctamente");
 });
+console.log("El script.js se está ejecutando correctamente");
