@@ -43,7 +43,11 @@ a:hover {
     text-decoration: underline;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
 #map {
-    height: 500px; /* Ajusta según necesidad */
+    height: 90vh;
     width: 100%;
 }
