@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Municipio</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="municipio-nombre">Municipio</h1>
+    </header>
+    <main>
+        <section id="graficas">
+            <h2>Gráficas</h2>
+            <iframe id="grafica-temp-max" src="variacion-diaria-temp-max.html"></iframe>
+            <iframe id="grafica-temp-min" src="variacion-diaria-temp-min.html"></iframe>
+            <iframe id="grafica-precip" src="variacion-diaria-precip.html"></iframe>
+        </section>
+        <section id="tablas">
+            <h2>Tablas de Datos</h2>
+            <a href="temperatura-maxima.csv" download>Descargar Temperatura Máxima</a><br>
+            <a href="temperatura-minima.csv" download>Descargar Temperatura Mínima</a><br>
+            <a href="precipitacion.csv" download>Descargar Precipitación</a>
+        </section>
+    </main>
+</body>
+</html>
